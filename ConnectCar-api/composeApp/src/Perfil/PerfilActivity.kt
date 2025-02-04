@@ -17,8 +17,11 @@ class PerfilActivity : AppCompatActivity() {
     private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val selectedImageUri: Uri? = result.data?.data
-            if (selectedImageUri != null) {
+            if (selectedImageUri != null && ::profileImage.isInitialized) {
                 profileImage.setImageURI(selectedImageUri)
+            } else {
+                // Log ou mensagem de erro caso a imagem não seja selecionada
+                println("Erro: Nenhuma imagem selecionada ou ImageView não inicializado.")
             }
         }
     }
@@ -43,13 +46,23 @@ class PerfilActivity : AppCompatActivity() {
         btnEditProfile.setOnClickListener {
             // Ir para a tela de edição do perfil
             val intent = Intent(this, EditarPerfilActivity::class.java)
-            startActivity(intent)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            } else {
+                // Log ou mensagem de erro caso a atividade de destino não exista
+                println("Erro: Atividade de destino não encontrada.")
+            }
         }
 
         btnChangePassword.setOnClickListener {
             // Ir para a tela de alteração de senha
             val intent = Intent(this, AlterarSenhaActivity::class.java)
-            startActivity(intent)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            } else {
+                // Log ou mensagem de erro caso a atividade de destino não exista
+                println("Erro: Atividade de destino não encontrada.")
+            }
         }
 
         // Ação do ícone de edição para abrir o seletor de imagens

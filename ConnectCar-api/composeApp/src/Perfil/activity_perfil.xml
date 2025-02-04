@@ -4,8 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://schemas.android.com/apk/res/android ">
+        android:padding="16dp">
 
     <ImageView
             android:id="@+id/profile_image"
@@ -13,7 +12,8 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_profile_placeholder"
-            android:contentDescription="@string/profile_image"/>
+            android:contentDescription="@string/profile_image"
+            android:layout_marginBottom="16dp"/>
 
     <ImageView
             android:id="@+id/edit_icon"
@@ -21,34 +21,39 @@
             android:layout_height="24dp"
             android:layout_gravity="end"
             android:src="@drawable/ic_edit"
-            android:contentDescription="@string/edit_icon"/>
+            android:contentDescription="@string/edit_icon"
+            android:layout_marginBottom="16dp"/>
 
     <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/name"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
 
     <TextView
             android:id="@+id/tv_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/email"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
 
     <TextView
             android:id="@+id/tv_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/phone"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
 
     <Button
             android:id="@+id/btn_edit_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/edit_profile"/>
+            android:text="@string/edit_profile"
+            android:layout_marginBottom="8dp"/>
 
     <Button
             android:id="@+id/btn_change_password"
