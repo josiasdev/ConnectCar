@@ -1,8 +1,6 @@
 <h1 align="center">ConnectCar</h1>
 
-<p align="center">
-    <img src="./ConnectCar-app//assets/Logo/logo.png" alt="Logo do ConnectCar" width="150">
-</p>
+
 Uma solução móvel para conectar pessoas que precisam enviar objetos a caminhoneiros com espaço de sobra em suas rotas, otimizando o transporte e criando novas oportunidades.
 
 ## Sobre o Projeto
